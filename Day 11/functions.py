@@ -1,288 +1,228 @@
-# Day 10: 30 Days of python programming
+# Day 11: 30 Days of python programming
 
-# num1 = 0
+# def add_two_numbers(num1, num2):
+#     return num1 + num2
 
-# while num1 < 11:
-#   print(num1)
-#   num1 = num1 + 1
+# print(add_two_numbers(2, 2))
 
-# for num in range(11):
-#   print(num)
+# def area_of_circle(radius):
+#     return 3.14 * radius * radius
 
-# num2 = 10
+# print(area_of_circle(30))
 
-# while num2 >= 0:
-#   print(num2)
-#   num2 = num2 - 1
+# def add_all_nums(*args):
+#     if all(isinstance(arg, (int, float)) for arg in args):
+#         return sum(args)
+#     else:
+#         return "All arguments must be numbers (int or float)."
 
-# for num in range(10, -1, -1):
-#   print(num)
+# print(add_all_nums(1, 2, 3.5))  # Expected output: 6.5
+# print(add_all_nums(1, 2, '3'))  # Expected output: "All arguments must be numbers (int or float)."
 
-# for num in range(1,8):
-#   hashes = ''
-#   for i in range(num):
-#     hashes = hashes + '#'
-#   print(hashes)
+# def convert_celsius_to_fahrenheit(degree):
+#     return (degree * (9/5)) + 32
 
-# for num in range(8):
-#   hashes = ''
-#   for i in range(8):
-#     hashes = hashes + '#'
-#   print(hashes)
+# print(convert_celsius_to_fahrenheit(26))
 
-# for i in range(11):
-#   print(f'{i} x {i} = {i*i}')
+# def check_season(month):
+#     Autumn = ['September', 'October', 'November']
+#     Winter = ['December', 'January', 'February']
+#     Spring = ['March', 'April', 'May']
+#     Summer = ['June', 'July', 'August']
+#     if month in Autumn:
+#         return 'Autumn'
+#     elif month in Winter:
+#         return 'Winter'
+#     elif month in Spring:
+#         return 'Spring'
+#     else:
+#         return 'Summer'
 
-# lst = ['Python', 'Numpy','Pandas','Django', 'Flask']
+# print(check_season('September'))
+# print(check_season('December'))
+# print(check_season('March'))
+# print(check_season('June'))
 
-# for tech in lst:
-#   print(tech)
+# def calculate_slope(x1, y1, x2, y2):
+#     if x1 == x2:
+#         return "The slope is undefined (vertical line)."
+#     return (y2 - y1) / (x2 - x1)
 
-# for i in range(0, 101, 2):
-#   print(i)
+# print(calculate_slope(1, 2, 3, 4))
 
-# for i in range(1, 100, 2):
-#   print(i)
+# def print_list(lst):
+#     for item in lst:
+#         print(item)
+        
+# print_list(['September', 'October', 'November'])
 
-# for num in range(101):
-#     if num % 2 == 0:
-#         print(num)
+# def reverse_list(lst):
+#     reversed_lst = []
+#     for i in range(len(lst) - 1, -1, -1):
+#         reversed_lst.append(lst[i])
+#     return reversed_lst
 
-# for num in range(101):
-#     if num % 2 != 0:
-#         print(num)
 
-# sum = 0
+# print(reverse_list(['September', 'October', 'November']))
 
-# for num in range(101):
-#   sum = sum + num
+# def capitalize_list_items(lst):
+#     cap_lst = []
+#     for i in range(len(lst)):
+#         cap_lst.append(lst[i].capitalize())
+#     return cap_lst
 
-# print(sum)
+# print(capitalize_list_items(['september', 'october', 'november']))
 
-# sum_even = 0
-# sum_odd = 0
+# def add_item(lst, new_item):
+#     lst.append(new_item)
+#     return lst
 
-# for num in range(101):
-#  if num % 2 == 0:
-#     sum_even = sum_even + num 
-#  else:
-#     sum_odd = sum_odd + num
+# food_staff = ['Potato', 'Tomato', 'Mango', 'Milk'];
+# print(add_item(food_staff, 'Meat'))     # ['Potato', 'Tomato', 'Mango', 'Milk','Meat'];
 
-# print('Even sum: ', sum_even)
-# print('Odd sum: ', sum_odd)
+# def remove_item(lst, rem_item):
+#     lst.remove(rem_item)
+#     return lst
 
-land_counteries = []
+# print(remove_item(food_staff, 'Mango'))
+
+# def sum_of_numbers(num):
+#     return sum(range(num + 1))
+
+# print(sum_of_numbers(5))  # 15
+# print(sum_of_numbers(10)) # 55
+# print(sum_of_numbers(100)) # 5050
+
+# def sum_of_odds(num):
+#     sum = 0
+#     for i in range(num + 1):
+#         if i % 2 != 0:
+#             sum = sum + i
+#     return sum
+
+# print(sum_of_odds(100))
+
+# def sum_of_evens(num):
+#     sum = 0
+#     for i in range(num + 1):
+#         if i % 2 == 0:
+#             sum = sum + i
+#     return sum
+
+# print(sum_of_evens(100))
+
+# def evens_and_odds(num):
+#     evens = 0
+#     odds = 0
+#     for i in range(num + 1):
+#         if i % 2 == 0:
+#             evens = evens + 1
+#         else:
+#             odds = odds + 1
+#     return f'The number of odds are {odds}. The number of evens are {evens}.'
+
+# def factorial(num):
+#     fact = 1
+#     for i in range(1, num + 1):
+#         fact = fact * i
+#     return fact
+
+# print(factorial(5))
+
+# def is_empty(iterable):
+#     if len(iterable) == 0:
+#         return True
+#     else:
+#         return False
+    
+# print(is_empty([]))
+# print(is_empty(''))
+# print(is_empty('Sean'))
+# print(is_empty(['Sean']))
+
+def calculate_mean(lst):
+    return sum(lst) / len(lst)
+
+# print(calculate_mean([1, 2, 3, 4, 5]))
+
+# def calculate_median(lst):
+#     if len(lst) % 2 != 0:
+#         return lst[len(lst) // 2]
+#     else:
+#         mid1 = len(lst) // 2 - 1
+#         mid2 = len(lst) // 2
+#         return (lst[mid1] + lst[mid2]) / 2
+
+# print(calculate_median([1, 2, 3, 4, 5]))
+# print(calculate_median([1, 2, 3, 4, 5, 6]))
+
+from collections import Counter
+
+# def calculate_mode(lst):
+#     count = Counter(lst)
+#     max_count = max(count.values())
+#     modes = [num for num, freq in count.items() if freq == max_count]
+#     return modes
+# print(calculate_mode([1, 1, 1, 2, 3, 4, 5, 6]))
+# print(calculate_mode([1, 1, 1, 2, 2, 2, 3, 4, 5, 6]))
+
+# def calculate_range(lst):
+#     return max(lst) - min(lst)
+
+# print(calculate_range([1, 1, 1, 2, 3, 4, 5, 6]))
+
+# def calculate_variance(lst):
+#     sum_sqr_diff = 0
+#     mean = calculate_mean(lst)
+#     for num in lst:
+#         sum_sqr_diff += (num - mean) **2
+#     return sum_sqr_diff / len(lst)
+
+# print(calculate_variance([1, 1, 1, 2, 3, 4, 5, 6]))
+
+# import math
+
+# def calculate_std(lst):
+#     return math.sqrt(calculate_variance(lst))
+
+# print(calculate_std([1, 1, 1, 2, 3, 4, 5, 6]))
+
+# def is_prime(num):
+#     for i in range(2, int(num**0.5) + 1):
+#         if num % i == 0:
+#             return False
+#     return True
+
+# print(is_prime(6))
+# print(is_prime(7))
+
+# def is_unique(lst):
+#     return len(lst) == len(set(lst))
+
+# print(is_unique([1, 1, 1, 2, 3, 4, 5, 6]))
+# print(is_unique([1, 2, 3, 4, 5, 6]))
+
+# def same_type(lst):
+#     for i in range(1, len(lst)):
+#         if type(lst[0]) != type(lst[i]):
+#             return False
+#     return True
+
+# print(same_type([1, 2, 3, 4, 5, 6]))
+# print(same_type([1, 2, 3, 4, 5, '6']))
+
+# def valid_variable(variable):
+#     if variable[0].isalpha():
+#         return True
+#     elif variable[0] == '_':
+#         return True
+#     else:
+#         return False
+# print(valid_variable('sean'))
+# print(valid_variable('_sean'))
+# print(valid_variable('1sean'))
 
 countries = [
-  'Afghanistan',
-  'Albania',
-  'Algeria',
-  'Andorra',
-  'Angola',
-  'Antigua and Barbuda',
-  'Argentina',
-  'Armenia',
-  'Australia',
-  'Austria',
-  'Azerbaijan',
-  'Bahamas',
-  'Bahrain',
-  'Bangladesh',
-  'Barbados',
-  'Belarus',
-  'Belgium',
-  'Belize',
-  'Benin',
-  'Bhutan',
-  'Bolivia',
-  'Bosnia and Herzegovina',
-  'Botswana',
-  'Brazil',
-  'Brunei',
-  'Bulgaria',
-  'Burkina Faso',
-  'Burundi',
-  'Cambodia',
-  'Cameroon',
-  'Canada',
-  'Cape Verde',
-  'Central African Republic',
-  'Chad',
-  'Chile',
-  'China',
-  'Colombi',
-  'Comoros',
-  'Congo (Brazzaville)',
-  'Congo',
-  'Costa Rica',
-  "Cote d'Ivoire",
-  'Croatia',
-  'Cuba',
-  'Cyprus',
-  'Czech Republic',
-  'Denmark',
-  'Djibouti',
-  'Dominica',
-  'Dominican Republic',
-  'East Timor (Timor Timur)',
-  'Ecuador',
-  'Egypt',
-  'El Salvador',
-  'Equatorial Guinea',
-  'Eritrea',
-  'Estonia',
-  'Ethiopia',
-  'Fiji',
-  'Finland',
-  'France',
-  'Gabon',
-  'Gambia, The',
-  'Georgia',
-  'Germany',
-  'Ghana',
-  'Greece',
-  'Grenada',
-  'Guatemala',
-  'Guinea',
-  'Guinea-Bissau',
-  'Guyana',
-  'Haiti',
-  'Honduras',
-  'Hungary',
-  'Iceland',
-  'India',
-  'Indonesia',
-  'Iran',
-  'Iraq',
-  'Ireland',
-  'Israel',
-  'Italy',
-  'Jamaica',
-  'Japan',
-  'Jordan',
-  'Kazakhstan',
-  'Kenya',
-  'Kiribati',
-  'Korea, North',
-  'Korea, South',
-  'Kuwait',
-  'Kyrgyzstan',
-  'Laos',
-  'Latvia',
-  'Lebanon',
-  'Lesotho',
-  'Liberia',
-  'Libya',
-  'Liechtenstein',
-  'Lithuania',
-  'Luxembourg',
-  'Macedonia',
-  'Madagascar',
-  'Malawi',
-  'Malaysia',
-  'Maldives',
-  'Mali',
-  'Malta',
-  'Marshall Islands',
-  'Mauritania',
-  'Mauritius',
-  'Mexico',
-  'Micronesia',
-  'Moldova',
-  'Monaco',
-  'Mongolia',
-  'Morocco',
-  'Mozambique',
-  'Myanmar',
-  'Namibia',
-  'Nauru',
-  'Nepal',
-  'Netherlands',
-  'New Zealand',
-  'Nicaragua',
-  'Niger',
-  'Nigeria',
-  'Norway',
-  'Oman',
-  'Pakistan',
-  'Palau',
-  'Panama',
-  'Papua New Guinea',
-  'Paraguay',
-  'Peru',
-  'Philippines',
-  'Poland',
-  'Portugal',
-  'Qatar',
-  'Romania',
-  'Russia',
-  'Rwanda',
-  'Saint Kitts and Nevis',
-  'Saint Lucia',
-  'Saint Vincent',
-  'Samoa',
-  'San Marino',
-  'Sao Tome and Principe',
-  'Saudi Arabia',
-  'Senegal',
-  'Serbia and Montenegro',
-  'Seychelles',
-  'Sierra Leone',
-  'Singapore',
-  'Slovakia',
-  'Slovenia',
-  'Solomon Islands',
-  'Somalia',
-  'South Africa',
-  'Spain',
-  'Sri Lanka',
-  'Sudan',
-  'Suriname',
-  'Swaziland',
-  'Sweden',
-  'Switzerland',
-  'Syria',
-  'Taiwan',
-  'Tajikistan',
-  'Tanzania',
-  'Thailand',
-  'Togo',
-  'Tonga',
-  'Trinidad and Tobago',
-  'Tunisia',
-  'Turkey',
-  'Turkmenistan',
-  'Tuvalu',
-  'Uganda',
-  'Ukraine',
-  'United Arab Emirates',
-  'United Kingdom',
-  'United States',
-  'Uruguay',
-  'Uzbekistan',
-  'Vanuatu',
-  'Vatican City',
-  'Venezuela',
-  'Vietnam',
-  'Yemen',
-  'Zambia',
-  'Zimbabwe',
-];
-
-# for country in countries:
-#   if 'land' in country:
-#     land_counteries.append(country)
-
-# print(land_counteries)
-
-# fruit_list = ['banana', 'orange', 'mango', 'lemon']
-# reversed_list= []
-# for i in range(len(fruit_list) - 1, -1, -1):
-#     reversed_list.append(fruit_list[i])
-
-# print(reversed_list)
-
-country_data = [
     {
         "name": "Afghanistan",
         "capital": "Kabul",
@@ -2903,25 +2843,17 @@ country_data = [
     }
 ]
 
-languages_spoken = set()
-for country in country_data:
-    for language in country['languages']:
-        languages_spoken.add(language)
-print(len(languages_spoken))
+def most_spoken_languages(lst):
+    languages_counter = Counter()
+    for country in lst:
+        languages_counter.update(country['languages'])
+    return languages_counter.most_common(20)
+print(most_spoken_languages(countries))
 
-from collections import Counter
-
-language_counter = Counter()
-
-for country in country_data:
-    language_counter.update(country['languages'])
-  
-print(language_counter.most_common(10))
-
-most_populated = sorted(country_data, key=lambda x: x['population'], reverse=True)
-
-most_populated_names = []
-for country in most_populated[:10]:
-  most_populated_names.append(country['name'])
-print(most_populated_names)
-
+def most_populated_counteries(lst):
+    most_populated = sorted(lst, key=lambda x: x['population'], reverse=True)
+    most_populated_names = []
+    for country in most_populated[:20]:
+        most_populated_names.append(country['name']) 
+    return most_populated_names
+print(most_populated_counteries(countries))
