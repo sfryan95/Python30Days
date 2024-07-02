@@ -1,0 +1,32 @@
+# Day 13: 30 Days of python programming
+
+# numbers = [-4, -3, -2, -1, 0, 2, 4, 6]
+
+# neg_and_zero = [i for i in numbers if i <=0]
+
+# print(neg_and_zero)
+
+# list_of_lists =[[[1, 2, 3]], [[4, 5, 6]], [[7, 8, 9]]]
+# flat = [number for sublist in list_of_lists for row in sublist for number in row]
+# print(flat)
+
+# print([(i, 1, i ** 1, i**2, i**3, i**4, i**5) for i in range(11)])
+
+countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+
+# flatten = [(country.upper(), country.upper()[:3], capital) for sublist in countries for row in sublist for country, capital in [row]]
+
+# print(flatten)
+
+# dict_paris = [{'country': country.upper(), 'city': capital.upper()} for sublist in countries for row in sublist for country, capital in [row]]
+
+# print(dict_paris)
+
+names = [[('Asabeneh', 'Yetayeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
+
+joined_names = [first_name + ' ' + last_name for sublist in names for row in sublist for first_name, last_name in [row]]
+
+print(joined_names)
+
+slope_solver = lambda x1, y1, x2, y2: (y2 - y1) / (x2 - x1)
+y_intercept = lambda m, x, y: y - m * x
